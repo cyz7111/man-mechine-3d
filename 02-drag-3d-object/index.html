@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag 3D Object</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="workspace" id="workspace" aria-label="Draggable 3D object workspace">
+        <div class="stage" id="stage">
+          <div class="target" id="target" aria-hidden="true">
+            <span>Target</span>
+          </div>
+
+          <button class="object" id="object" type="button" aria-label="可拖拽 3D 物体">
+            <span class="object__face object__front">
+              <span class="object__label">DRAG</span>
+            </span>
+            <span class="object__face object__top"></span>
+            <span class="object__face object__right"></span>
+          </button>
+        </div>
+
+        <aside class="panel" aria-label="Drag telemetry">
+          <div class="panel__header">
+            <p>Experiment 02</p>
+            <h1>Drag 3D Object</h1>
+          </div>
+
+          <div class="metric">
+            <span>State</span>
+            <strong id="stateText">等待拖拽</strong>
+          </div>
+          <div class="metric">
+            <span>Position</span>
+            <strong id="positionText">0, 0</strong>
+          </div>
+          <div class="metric">
+            <span>Distance</span>
+            <strong id="distanceText">0 px</strong>
+          </div>
+          <div class="metric-grid">
+            <div class="metric">
+              <span>Drags</span>
+              <strong id="dragCountText">0</strong>
+            </div>
+            <div class="metric">
+              <span>Time</span>
+              <strong id="timeText">0.0s</strong>
+            </div>
+          </div>
+
+          <button class="reset-button" id="resetButton" type="button">复位</button>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pointer 3D Card</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="stage" id="stage" aria-label="Pointer controlled 3D card">
+        <div class="scene">
+          <div class="card" id="card">
+            <div class="card__face card__front">
+              <div class="card__top">
+                <span class="status-dot" id="statusDot"></span>
+                <span id="statusText">等待输入</span>
+              </div>
+              <div class="card__body">
+                <p class="eyebrow">Experiment 01</p>
+                <h1>Pointer 3D Card</h1>
+                <p>移动鼠标或手指，观察输入如何变成空间里的旋转、光照和反馈。</p>
+              </div>
+              <div class="card__grid" aria-hidden="true"></div>
+            </div>
+            <div class="card__face card__back"></div>
+          </div>
+        </div>
+
+        <aside class="panel" aria-label="Interaction telemetry">
+          <div class="metric">
+            <span>X</span>
+            <strong id="metricX">0.00</strong>
+          </div>
+          <div class="metric">
+            <span>Y</span>
+            <strong id="metricY">0.00</strong>
+          </div>
+          <div class="metric">
+            <span>Rotate</span>
+            <strong id="metricRotate">0 deg</strong>
+          </div>
+          <button class="reset-button" id="resetButton" type="button">复位</button>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
