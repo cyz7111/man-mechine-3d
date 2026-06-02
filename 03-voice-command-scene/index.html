@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Command Scene</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="workspace" aria-label="Voice command scene">
+        <div class="scene" id="scene">
+          <div class="orbital-ring ring-one" aria-hidden="true"></div>
+          <div class="orbital-ring ring-two" aria-hidden="true"></div>
+
+          <div class="machine" id="machine" aria-label="Command controlled machine">
+            <div class="machine__core">
+              <span class="machine__light"></span>
+              <span class="machine__label">SCENE</span>
+            </div>
+            <div class="machine__shadow"></div>
+          </div>
+        </div>
+
+        <aside class="control-panel" aria-label="Command controls">
+          <header class="panel-header">
+            <p>Experiment 03</p>
+            <h1>Voice Command Scene</h1>
+          </header>
+
+          <div class="status-box">
+            <span>Status</span>
+            <strong id="statusText">等待命令</strong>
+          </div>
+
+          <div class="transcript-box">
+            <span>Last Command</span>
+            <strong id="commandText">-</strong>
+          </div>
+
+          <div class="voice-row">
+            <button class="primary-button" id="listenButton" type="button">开始听写</button>
+            <button class="ghost-button" id="stopButton" type="button">停止</button>
+          </div>
+
+          <form class="command-form" id="commandForm">
+            <label for="commandInput">Text Command</label>
+            <div class="input-row">
+              <input id="commandInput" type="text" placeholder="例如：变蓝 / 放大 / 旋转" />
+              <button type="submit">执行</button>
+            </div>
+          </form>
+
+          <div class="command-grid" aria-label="Quick commands">
+            <button type="button" data-command="变蓝">变蓝</button>
+            <button type="button" data-command="变绿">变绿</button>
+            <button type="button" data-command="变红">变红</button>
+            <button type="button" data-command="变黄">变黄</button>
+            <button type="button" data-command="旋转">旋转</button>
+            <button type="button" data-command="暂停">暂停</button>
+            <button type="button" data-command="放大">放大</button>
+            <button type="button" data-command="缩小">缩小</button>
+            <button type="button" data-command="隐藏">隐藏</button>
+            <button type="button" data-command="显示">显示</button>
+            <button type="button" data-command="复位">复位</button>
+          </div>
+
+          <div class="metrics">
+            <div class="metric">
+              <span>Color</span>
+              <strong id="colorText">Blue</strong>
+            </div>
+            <div class="metric">
+              <span>Scale</span>
+              <strong id="scaleText">1.00</strong>
+            </div>
+            <div class="metric">
+              <span>Motion</span>
+              <strong id="motionText">Paused</strong>
+            </div>
+            <div class="metric">
+              <span>Count</span>
+              <strong id="countText">0</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+

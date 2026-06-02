@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camera Hand Tracking</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="workspace" aria-label="Camera tracking workspace">
+        <div class="stage" id="stage">
+          <div class="camera-card">
+            <video id="cameraVideo" playsinline muted></video>
+            <canvas id="trackingCanvas" width="120" height="90" aria-hidden="true"></canvas>
+            <span class="tracking-dot" id="trackingDot"></span>
+          </div>
+
+          <div class="machine" id="machine" aria-label="Camera controlled object">
+            <span class="machine__face machine__front">
+              <span>TRACK</span>
+            </span>
+            <span class="machine__face machine__top"></span>
+            <span class="machine__face machine__side"></span>
+          </div>
+        </div>
+
+        <aside class="panel" aria-label="Tracking controls">
+          <header class="panel-header">
+            <p>Experiment 04</p>
+            <h1>Camera Hand Tracking</h1>
+          </header>
+
+          <div class="status-box">
+            <span>Status</span>
+            <strong id="statusText">等待输入</strong>
+          </div>
+
+          <div class="controls">
+            <button class="primary-button" id="startButton" type="button">启动摄像头</button>
+            <button class="ghost-button" id="stopButton" type="button">停止</button>
+          </div>
+
+          <label class="toggle">
+            <input id="pointerToggle" type="checkbox" />
+            <span>指针模拟</span>
+          </label>
+
+          <div class="metrics">
+            <div class="metric">
+              <span>X</span>
+              <strong id="xText">0.00</strong>
+            </div>
+            <div class="metric">
+              <span>Y</span>
+              <strong id="yText">0.00</strong>
+            </div>
+            <div class="metric">
+              <span>Confidence</span>
+              <strong id="confidenceText">0%</strong>
+            </div>
+            <div class="metric">
+              <span>Mode</span>
+              <strong id="modeText">Idle</strong>
+            </div>
+          </div>
+
+          <button class="reset-button" id="resetButton" type="button">复位</button>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+

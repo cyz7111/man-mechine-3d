@@ -41,10 +41,14 @@
 
 ## 当前入口
 
-当前可以进入第二个实验：
+当前可以进入第四个实验：
 
 ```txt
-02-drag-3d-object/index.html
+04-camera-hand-tracking/index.html
 ```
 
-用浏览器直接打开即可。
+这个实验涉及摄像头，建议通过本地服务器打开：
+
+```txt
+http://localhost:4173/04-camera-hand-tracking/
+```
